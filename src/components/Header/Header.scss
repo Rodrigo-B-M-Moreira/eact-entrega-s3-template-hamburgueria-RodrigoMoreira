@@ -1,0 +1,140 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #e0e0e0;
+    background-color: #ffffff;
+
+    img {
+        width: 150px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button:first-of-type {
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            svg {
+                color: #333333;
+            }
+
+            span {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: #27ae60;
+                color: white;
+                font-size: 0.75rem;
+                border-radius: 50%;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+
+            input {
+                border: none;
+                padding: 0.5rem;
+                outline: none;
+                width: 150px;
+
+                &::placeholder {
+                    color: #828282;
+                }
+            }
+
+            button {
+                background-color: #27ae60;
+                border: none;
+                padding: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                svg {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    /* MEDIA QUERIES PARA RESPONSIVIDADE */
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+
+        img {
+            width: 120px;
+        }
+
+        div {
+            gap: 0.5rem;
+
+            form {
+                input {
+                    width: 100px;
+                    padding: 0.4rem;
+                    font-size: 0.9rem;
+                }
+
+                button {
+                    padding: 0.4rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        img {
+            width: 100px;
+            margin-bottom: 0.5rem;
+        }
+
+        div {
+            width: 100%;
+            justify-content: space-between;
+
+            button:first-of-type {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            form {
+                flex: 1;
+
+                input {
+                    width: 100%;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                }
+
+                button {
+                    padding: 0.5rem 0.75rem;
+                }
+            }
+        }
+    }
+}
